@@ -1,0 +1,47 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 0px auto;
+  text-align: center;
+}
+.AI {
+  z-index: 100;
+  max-width: 285px;
+  position: fixed;
+  bottom: 10%;
+  right: 3%;
+}
+#avatar {
+  border: 3px ridge #b20000;
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-image: url(club-ai.gif);
+  position: fixed;
+  bottom: 2%;
+  right: 3%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.club-ai {
+  display: none;
+  overflow: hidden;
+  height: 80px;
+}
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    background-color: #240000;
+}
+.container h1 {
+    padding: 5px;
+    color: white;
+    font-size: clamp(3rem, 0.8571rem + 6.8571vw, 6rem);
+    font-family: 'Lato', sans-serif;
+}

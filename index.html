@@ -1,73 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AI TESTING</title>
-     <link rel="icon" type="image/icon" href="club-ai.gif">
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-     <style media="screen">
-      html,body{
-        height: 100%;
-        width: 100%;
-        background-color: rgba(0,0,0,0.5);
-        margin: 0px auto;
-        text-align: center;
-      }
-       .AI{
-         z-index: 100;
-        max-width: 285px;
-        position: fixed;
-        bottom: 10%;
-        right: 3%;
-      }
-      #avatar{
-        border: 3px ridge #B20000;
-        cursor: pointer;
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        background-image: url(club-ai.gif);
-        position: fixed;
-        bottom: 2%;
-        right: 3%;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-      }
-
-      .club-ai{
-        display: none;
-        overflow: hidden;
-        height: 80px;
-       }
-    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title> AI Chatbot </title>
+    <link rel="icon" type="image/icon" href="club-ai.gif" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-
-      <div class="AI">
-        <div class="club-ai">
-          <iframe id="club-ai" width="280" height="430" allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/1a9f3e5e-1a8d-4ca5-a22f-82e51e55a6f6"></iframe>
-        </div>
-        <span id="avatar"></span>
+    <div class="container">
+      <h1>This is a demo for chatbot built using Dialogflow</h1>
+    </div>
+    <div class="AI">
+      <div class="club-ai">
+        <iframe
+          id="club-ai"
+          width="280"
+          height="430"
+          allow="microphone;"
+          src="https://console.dialogflow.com/api-client/demo/embedded/1a9f3e5e-1a8d-4ca5-a22f-82e51e55a6f6"
+        ></iframe>
       </div>
+      <span id="avatar"></span>
+    </div>
 
     <script>
-    $(document).ready(function(){
-          window.setTimeout( function() {
-              $('.club-ai').css('display','block');
-            },1000 );
-            $('#avatar').on('click',function(){
-              if ($('.club-ai').hasClass('ok')==1) {
-                  $('.club-ai').slideToggle();
-              }
-              $('.club-ai').css('height', 'auto').addClass('ok');
-            });
+      $(document).ready(function () {
+        window.setTimeout(function () {
+          $(".club-ai").css("display", "block");
+        }, 1000);
+        $("#avatar").on("click", function () {
+          if ($(".club-ai").hasClass("ok") == 1) {
+            $(".club-ai").slideToggle();
+          }
+          $(".club-ai").css("height", "auto").addClass("ok");
         });
-
-     </script>
-
+      });
+    </script>
   </body>
-
 </html>
