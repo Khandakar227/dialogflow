@@ -4,6 +4,8 @@ body {
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   margin: 0px auto;
+  font-family: "Lato", sans-serif;
+  color: white;
   text-align: center;
 }
 .AI {
@@ -19,7 +21,7 @@ body {
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background-image: url(club-ai.gif);
+  background-image: url(club-bot.gif);
   position: fixed;
   bottom: 2%;
   right: 3%;
@@ -33,15 +35,43 @@ body {
   height: 80px;
 }
 .container {
-    height: 100vh;
-    width: 100vw;
-    display: grid;
-    place-items: center;
-    background-color: #240000;
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  background-color: #240000;
 }
 .container h1 {
-    padding: 5px;
-    color: white;
-    font-size: clamp(3rem, 0.8571rem + 6.8571vw, 6rem);
-    font-family: 'Lato', sans-serif;
+  position: relative;
+  padding: 5px;
+  font-size: clamp(2rem, 0.8571rem + 6.8571vw, 6rem);
+}
+.container p {
+  padding: 5px;
+  font-size: 1.2rem;
+}
+.scaffold {
+  position: relative;
+}
+#minion-bot {
+  position: absolute;
+  bottom: 0px;
+  width: 120px;
+  left: 30px;
+}
+#minion-bot img {
+  width: 100%;
+}
+#minion-bot .eye {
+  width: 25px;
+  position: absolute;
+  top: 35px;
+  left: 47px;
+}
+@media screen and (max-width: 586px) {
+  #minion-bot {
+    margin: 0 auto;
+    position: relative;
+    left: 0;
+  }
 }

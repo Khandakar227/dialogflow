@@ -16,7 +16,14 @@
   </head>
   <body>
     <div class="container">
-      <h1>This is a demo for chatbot built using Dialogflow</h1>
+      <div class="scaffold">
+        <h1>This is a demo for chatbot of an IT club (CCITC) built using Dialogflow </h1>
+        <div id="minion-bot">
+          <img src="assets/minion-bot.png" alt="minion bot" />
+          <img src="assets/minion-eye.png" class="eye" alt="minion eye"/>
+        </div>
+        <p>Ask her about CCITC</p>
+      </div>
     </div>
     <div class="AI">
       <div class="club-ai">
@@ -43,6 +50,28 @@
           $(".club-ai").css("height", "auto").addClass("ok");
         });
       });
+      const bot = document.querySelector("#minion-bot");
+      const rect = bot.getBoundingClientRect();
+      const anchorX = rect.left + rect.width/2;
+      const anchorY = rect.top + rect.height/2;
+      
+      window.addEventListener("mousemove", (ev) => {
+        const x = ev.clientX;
+        const y = ev.clientY;
+        const deg = angle(x, y, anchorX, anchorY);
+        
+        const eye = document.querySelector(".eye");
+        eye.style.transform = `rotate(${150+deg}deg)`;
+      })
+
+      function angle(cx, cy, ex, ey) {
+        const dy = ey - cy; 
+        const dx = ex - cx;
+        
+        const rad = Math.atan2(dy, dx);
+        const degree = rad * 180/Math.PI;
+        return degree;
+      }
     </script>
   </body>
 </html>
